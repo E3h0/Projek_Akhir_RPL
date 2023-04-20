@@ -3,9 +3,6 @@ include 'config.php';
 
 session_start();
 
-if(isset($_SESSION['username'])){
-	header("Location: home.php");
-}
 if (isset($_POST['submit'])){
 	$email = $_POST['email'];
 	$pass = $_POST['password'];
@@ -14,6 +11,8 @@ if (isset($_POST['submit'])){
 	if($res -> num_rows > 0){
 		$row = mysqli_fetch_assoc($res);
 		$_SESSION['username'] = $row['username'];
+		$_SESSION['id'] = $row['user_id']; 
+		header("Location: home.php");
 	}
 	else{
 		echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
@@ -29,11 +28,28 @@ if (isset($_POST['submit'])){
 	<title>Login</title>
 </head>
 <body>
+	<script>
+		function togglePassword(id) {
+ 	 		var x = document.getElementById(id);
+			var button = x.nextElementSibling;
+
+		 	if (x.type === "password") {
+		    	x.type = "text";
+		    	button.textContent = "Hide";
+		  	} 
+		  	else {
+		    	x.type = "password";
+		    	button.textContent = "Show";
+		  	}
+		}
+	</script>
+	<a href="index.php"><p style="text-align: right;">Back to homepage</p></a>
 	<div>
 		<form action="" method="POST">
 			<input type="email" name="email" placeholder="E-mail" value="" required> <br>
-			<input type="password" name="password" 
-			placeholder="Password" value="" required><br>
+			<input type="password" name="password" id="pwd" 
+			placeholder="Password" value="" required>
+			<button type="button" onclick="togglePassword('pwd')">Show</button><br>
 			<button name="submit">Login</button> <br>
 			<p>Belum punya akun?</p>
 			<a href="signup.php">Daftar sekarang</a>

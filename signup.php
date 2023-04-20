@@ -59,7 +59,7 @@
 		<input type="text" name="phone" placeholder="Enter phone number"><br>
 
 		<label>Password</label><br>
-		<input type="password" id="pwd" name="password" placeholder="Create password">
+		<input type="password" id="pwd" name="password" minlength="8" placeholder="Create password">
 		<button type="button" onclick="togglePassword('pwd')">Show</button><br>
 		<label>Confirm Password</label><br>
 		<input type="password" id="c_pwd" name="c_pwd" placeholder="Enter password">
@@ -88,6 +88,7 @@
 			$do = mysqli_query($connect, $sign_up);
 			if($do){
 				echo "<script>alert('Sign Up Succesfully!!!')</script>";
+				header("Location: index.php");
 			}
 			else{
 				echo("Fail");
