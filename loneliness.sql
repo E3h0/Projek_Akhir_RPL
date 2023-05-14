@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2023 at 03:00 PM
+-- Generation Time: May 14, 2023 at 07:47 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `loneliness`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `scores`
+--
+
+CREATE TABLE `scores` (
+  `u_id` int(11) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `values` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `scores`
+--
+
+INSERT INTO `scores` (`u_id`, `time`, `values`) VALUES
+(15, '2023-05-14 05:33:59', 22),
+(15, '2023-05-14 05:37:20', 80);
 
 -- --------------------------------------------------------
 
@@ -50,6 +70,12 @@ INSERT INTO `users` (`user_id`, `username`, `fullname`, `gender`, `phone`, `dob`
 --
 
 --
+-- Indexes for table `scores`
+--
+ALTER TABLE `scores`
+  ADD KEY `scores_fk_1` (`u_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -64,6 +90,16 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `scores`
+--
+ALTER TABLE `scores`
+  ADD CONSTRAINT `scores_fk_1` FOREIGN KEY (`u_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
