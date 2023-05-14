@@ -124,7 +124,7 @@
 		$id = $_SESSION['id'];
 		$uname = $_POST['username'];
 		$fname = $_POST['fullname'];
-		$gen = $_POST['gender']; 
+		$gen = $_POST['gender'];
 		$phone = $_POST['phone'];
 		$dob = $_POST['dob'];
 		$email = $_POST['email'];
