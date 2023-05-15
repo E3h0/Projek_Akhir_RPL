@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2023 at 07:47 AM
+-- Generation Time: May 15, 2023 at 10:59 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `loneliness`
 --
+CREATE DATABASE IF NOT EXISTS `loneliness` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `loneliness`;
 
 -- --------------------------------------------------------
 
@@ -39,7 +41,9 @@ CREATE TABLE `scores` (
 
 INSERT INTO `scores` (`u_id`, `time`, `values`) VALUES
 (15, '2023-05-14 05:33:59', 22),
-(15, '2023-05-14 05:37:20', 80);
+(15, '2023-05-14 05:37:20', 80),
+(15, '2023-05-15 08:19:21', 60),
+(16, '2023-05-15 08:28:29', 20);
 
 -- --------------------------------------------------------
 
@@ -63,7 +67,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `fullname`, `gender`, `phone`, `dob`, `email`, `password`) VALUES
-(15, 'new_user', 'newuser', 'Female', '123456789012', '2023-04-20', 'newuser@tes.com', '12345678');
+(15, 'new_user', 'newuser', 'Female', '123456789012', '2023-04-20', 'newuser@tes.com', '12345678'),
+(16, 'tes2', 'tesyangke2', 'Male', '123456789012', '2023-05-15', 'teske2@tes.com', '12345678');
 
 --
 -- Indexes for dumped tables
@@ -89,7 +94,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
