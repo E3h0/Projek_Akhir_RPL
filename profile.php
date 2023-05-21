@@ -3,8 +3,12 @@
 	$id = $_SESSION['id'];
 	include "config.php";
 
-	$query = mysqli_query($connect, "SELECT * FROM scores INNER JOIN users ON scores.u_id = users.user_id ORDER BY scores.time DESC");
-	$res = mysqli_fetch_array($query);
+	$query = mysqli_query($connect, "SELECT * FROM scores INNER JOIN users ON scores.u_id = '$id' ORDER BY scores.time DESC");
+
+	$q = mysqli_query($connect, "SELECT * FROM users WHERE user_id = '$id'");
+
+	$res = mysqli_fetch_array($q);
+	$res1 = mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,7 +47,7 @@
 			</tr>
 			<tr>
 				<td>Loneliness score</td>
-				<td>: <?php echo $res['values'];?></td>
+				<td>: <?php echo $res1['values'];?></td>
 			</tr>
 		</table>
 	</div>
