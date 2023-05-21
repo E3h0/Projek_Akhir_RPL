@@ -57,6 +57,7 @@
       <p>A score of 20 or above indicates significant loneliness.</p>
     </div>
       <script>
+
         var i1 = document.getElementById("a1");
         var i2 = document.getElementById("a2");
         var i3 = document.getElementById("a3");
@@ -77,7 +78,21 @@
             }
             // nextButton.style.display = "none";
         }
-        
+        function calculateScore(answers) {
+          var reverseQuestions = [0, 4, 5, 8, 9, 14, 15, 18, 19];
+          var totalScore = 0;
+          
+          for (var i = 0; i < answers.length; i++) {
+            var answer = answers[i];
+            if (reverseQuestions.includes(i)) {
+              answer = 5 - answer; // Membalik skema nilai untuk pertanyaan yang memerlukan pembalikan
+            }
+            totalScore += answer;
+          }
+          
+          return totalScore;
+        }
+
         function nextQuestion() {
           	var radios = document.getElementsByName("answer");
               var selectedValue = -1;
@@ -95,7 +110,7 @@
       	answers[currentQuestion] = parseInt(selectedValue);
       	currentQuestion++;
       	if (currentQuestion === questions.length) {
-      		var totalScore = answers.reduce((a, b) => a + b);
+      		  var totalScore = calculateScore(answers);
       	    result.innerHTML = totalScore;
       	    score.style.display = "block";
       	    document.getElementById("question").style.display = "none";
