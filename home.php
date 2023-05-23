@@ -15,8 +15,8 @@
 	?>
 	<a href="index.php">Home</a> <br>
 	<a type="hidden" href="profile.php?id=<?php echo $id;?>">Profile</a><br>
-	<a href="temp/pre_test.php?id=<?php echo $id;?>">Loneliness Level Test</a><br>
-	<a href="#">Psikolog</a><br>
+	<a href="pre_test.php?id=<?php echo $id;?>">Loneliness Level Test</a><br>
+	<a href="psikolog.php">Psikolog</a><br>
 	<a href="logout.php">Logout</a>
 
 </body>

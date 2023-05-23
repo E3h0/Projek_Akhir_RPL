@@ -47,7 +47,16 @@
 			</tr>
 			<tr>
 				<td>Loneliness score</td>
-				<td>: <?php echo $res1['values'];?></td>
+				<td>: 
+				<?php
+				if($query->num_rows > 0){ 
+					echo $res1['values'];
+				}
+				else{
+					echo "Belum pernah melakukan tes.";
+				}
+				?> 	
+				</td>
 			</tr>
 		</table>
 	</div>
