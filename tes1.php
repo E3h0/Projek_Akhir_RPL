@@ -111,7 +111,7 @@
       	    // result.innerHTML = totalScore;
             var lonelinessLevel = categori(totalScore);
             // resultCategory.innerHTML = lonelinessLevel;
-            window.location.href = "result.php?score=" + totalScore + "&category=" + lonelinessLevel;
+            window.location.href = "result.php?score=" + totalScore + "&category=" + lonelinessLevel; 
       	    document.getElementById("question").style.display = "none";
       	    document.getElementsByName("answer").forEach(radio => radio.style.display = "none");
       	    anss.style.display = "none";
