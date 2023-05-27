@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-
+<a href="home.php"><p style="text-align: right;">Back to home</p></a>
 <div class="container mt-3">
   <h2>Psikolog</h2>
   <div class="card" style="width:400px">
