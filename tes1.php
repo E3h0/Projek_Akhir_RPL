@@ -1,13 +1,28 @@
 <?php 
   $id = $_GET['id'];
-  // echo $id;
 ?>
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Loneliness Level Test</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;700&family=Raleway:wght@200;400;700&family=Rambla:wght@700&display=swap"
+    rel="stylesheet"/>
+  
+    <!-- My Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  
+    <!-- My Styles -->
+    <link rel="stylesheet" href="style/style6.css">
+</head>
+<body>
     <script type="text/javascript">
       var questions = [
           "Seberapa sering kamu merasa cocok dengan orang-orang di sekitarmu",
@@ -32,37 +47,71 @@
           "Seberapa sering kamu merasa bisa meminta bantuan ke orang lain?",
         ];
         var currentQuestion = 0;
-      </script>
+    </script>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">
+                <h1>Loneliness Level Test</h1>
+            </div>
+        </div>
+        <div class="banner">
+            <form action="tes1.php" method="POST">
+                <div class="banner-progress">
+                    <div id="progress-bar" class="banner-progress-bar" style="width: 5%;"></div>
+                    <span id="progress">Pertanyaan 1/20</span>
+                </div>
+                <div class="banner-test">
+                    <div class="banner-question">
+                        <p id="question"><script type="text/javascript">document.getElementById("question").innerHTML = questions[currentQuestion];</script></p>
+                    </div>
+                    <div class="banner-answer" id="ans">
+                        <label for="a1">
+                            <input onclick="nextQuestion()" id="a1" type="radio" name="answer" value="1" onclick="selectAnswer(1)">
+                            Tidak pernah
+                        </label>
+                        <label for="a2">
+                            <input onclick="nextQuestion()" id="a2" type="radio" name="answer" value="2" onclick="selectAnswer(2)">
+                            Jarang
+                        </label>
+                        <label for="a3">
+                            <input onclick="nextQuestion()" id="a3" type="radio" name="answer" value="3" onclick="selectAnswer(3)">
+                            Kadang-kadang
+                        </label>
+                        <label for="a4">
+                            <input onclick="nextQuestion()" id="a4" type="radio" name="answer" value="4" onclick="selectAnswer(4)">
+                            Selalu
+                        </label>
+                    </div>
+                </div>
+                <div class="banner-button">
+                    <button type="button" id="backButton" disabled onclick="previousQuestion()">Back</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="footer-line"></div>
+        </div>
+    </div>
 
-    <h1>Loneliness Level Test</h1>
-    <p id="question"><script type="text/javascript">document.getElementById("question").innerHTML = (currentQuestion + 1) + "/20 <br>" + questions[currentQuestion];</script></p>
-    <form action="tes1.php" method="POST">
-      <div id="ans">
-        <input onclick="nextQuestion()" id="a1" type="radio" name="answer" value="1" onclick="selectAnswer(1)">
-        <label for="a1">Tidak Pernah</label><br>
-        <input onclick="nextQuestion()" id="a2" type="radio" name="answer" value="2" onclick="selectAnswer(2)">
-        <label for="a2">Jarang</label><br>
-        <input onclick="nextQuestion()" id="a3" type="radio" name="answer" value="3" onclick="selectAnswer(3)">
-        <label for="a3">Kadang-kadang</label><br>
-        <input onclick="nextQuestion()" id="a4" type="radio" name="answer" value="4" onclick="selectAnswer(4)">
-        <label for="a4">Selalu</label><br>
-      </div>
-      <button type="button" id="backButton" disabled onclick="previousQuestion()">Back</button>
-    </form>
-    <br><br>
-      <script>
+    <script>
+
         var answers = new Array(questions.length).fill(-1);
         // var currentQuestion = 0;
         var backButton = document.getElementById("backButton");
         var nextButton = document.getElementById("nextButton");
         var anss = document.getElementById('ans');
+        var progressBar = document.getElementById('progress-bar');
+        var progressWidth = 5;
         function previousQuestion() {
         currentQuestion--;
-       document.getElementById("question").innerHTML = (currentQuestion + 1) + "/20 <br>" + questions[currentQuestion];
+        document.getElementById("question").innerHTML = questions[currentQuestion];
             if (currentQuestion === 0) {
             	backButton.disabled = true;
             }
             // nextButton.style.display = "none";
+            progressBar -= 5;
+            progressWidth -= 5;
+            updateProgressBar();
         }
        
         function categori(score) {
@@ -129,6 +178,7 @@
             var currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
 
             // Mengirim nilai result dan id ke server melalui AJAX
+            // Mengirim total score dan category ke halaman "history"
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "proc.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -141,16 +191,26 @@
             xhr.send("id=" + encodeURIComponent(id) + "&result=" + encodeURIComponent(resultValue) + "&time=" + encodeURIComponent(currentTime));
 
       	  	} else {
-      	    	document.getElementById("question").innerHTML = (currentQuestion + 1) + "/20 <br>" + questions[currentQuestion];
+      	    	document.getElementById("question").innerHTML = questions[currentQuestion];
       	    for (var i = 0; i < radios.length; i++) {
       	      radios[i].checked = false;
       	    }
             backButton.disabled = false;
+            progressWidth += 5;
+            progressBar += 5;
+            updateProgressBar();
       	}
       }
       function selectAnswer(value) {
       	answers[currentQuestion] = parseInt(value);
       }
-  </script>
+
+      function updateProgressBar() {
+          var progressBarElement = document.getElementById("progress-bar");
+          progressBarElement.style.width = progressWidth + "%";
+          document.getElementById("progress").innerHTML = "Pertanyaan " + (currentQuestion + 1) + "/" + questions.length;
+      }
+    </script>
+    
 </body>
 </html>
