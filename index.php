@@ -29,9 +29,9 @@
         </div>
         <div class="header-btn">
           <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#footer">Help</a></li>
+            <li><a href="#footer">About Us</a></li>
             <li><a href="login.php">Log In</a></li>
           </ul>
         </div>
@@ -103,15 +103,12 @@
           </div>
         </div>
       </div>
-      <div class="footer">
+      <div class="footer" id="footer">
         <div class="footer-left">
           <div class="footer-left-loneliness">
             <h1>Loneliness Level Test</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              quaerat assumenda dolores eligendi quia doloribus cupiditate rerum
-              necessitatibus quis voluptate animi est ea officiis, itaque
-              corrupti! Impedit unde temporibus aperiam.
+                Loneliness Level Test merupakan alat yang dirancang untuk membantu Anda menilai tingkat kesepian yang mungkin Anda alami dalam kehidupan sehari-hari. Tes ini dapat memberikan wawasan dan pemahaman yang lebih baik tentang perasaan kesepian yang Anda rasakan, serta membantu mengidentifikasi faktor-faktor yang mungkin memengaruhinya. Dengan mengetahui tingkat kesepian Anda, Anda dapat mencari solusi yang tepat untuk mengatasi dan mengurangi perasaan kesepian yang mungkin Anda hadapi.
             </p>
           </div>
           <div class="footer-left-contacus">
