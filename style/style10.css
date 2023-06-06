@@ -1,0 +1,299 @@
+:root {
+  --primary: #3d3c3c;
+  --bg: linear-gradient(
+    180deg,
+    rgba(197, 139, 131, 0.3) 0%,
+    rgba(255, 255, 255, 0) 21.03%,
+    #ffffff 21.03%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Franklin Libre Ruhl";
+  background-image: linear-gradient(
+    180deg,
+    rgba(197, 139, 131, 0.3) 0%,
+    rgba(255, 255, 255, 0) 9%,
+    #ffffff 31.03%
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--primary);
+}
+
+.container {
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 3%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 80px;
+}
+
+.header h1 {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.banner-leftbox {
+  width: 25%;
+  background: rgba(255, 255, 255, 0.37);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  position: relative;
+  left: 200px;
+  padding: 20px;
+}
+
+.banner-leftbox-title h1 {
+  font-family: "Rambla";
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 86px;
+  color: rgba(0, 53, 56, 0.21);
+  border: 1px #8c7c7c;
+}
+
+.banner-leftbox-title p {
+  font-family: "Frank Ruhl Libre";
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  position: relative;
+  bottom: 15px;
+}
+
+.banner-leftbox ul {
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-leftbox li {
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* .banner-leftbox li:hover {
+  background-color: #f5f5f5;
+} */
+
+.banner-leftbox li a {
+  text-decoration: none;
+}
+
+.banner-leftbox-button-top,
+.banner-leftbox-button-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 78%;
+}
+
+.banner-leftbox-button-top ul {
+  padding-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 19px;
+}
+
+.banner-leftbox-button-top a,
+.banner-leftbox-button-bottom a {
+  color: var(--primary);
+}
+
+.banner-leftbox-button-top a > span {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+}
+
+li.home,
+li.profile,
+li.llt {
+  width: 80px;
+  text-align: center;
+}
+
+li.llt {
+  position: relative;
+  top: 15%;
+}
+
+.banner-leftbox-button-bottom ul {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 17px;
+}
+
+.banner-leftbox-button-bottom a > span {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+}
+
+li.mentor,
+li.history,
+li.logout {
+  width: 80px;
+  text-align: center;
+}
+
+li.mentor {
+  position: relative;
+  top: 10%;
+}
+
+.banner-leftbox a:hover {
+  stroke-width: 3;
+  font-weight: bold;
+}
+
+.banner-rightbox {
+  background: rgba(255, 255, 255, 0.37);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 25px;
+  padding-right: 30px;
+  width: 30%;
+  height: 400px;
+  position: relative;
+  right: 200px;
+}
+
+.banner-rightbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.banner-rightbox-title h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.banner-rightbox-profile a {
+  text-decoration: underline;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.banner-rightbox-profile a:hover {
+  font-weight: bold;
+}
+
+.banner-rightbox-form {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.input-form-left {
+  padding-right: 20px;
+}
+
+.input-form-right {
+  padding-right: 10px;
+}
+
+.input-form-left label,
+.input-form-right label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.input-form-left input,
+.input-form-right input,
+.input-form-right select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #ffffff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.input-form-right select {
+  padding-left: 15px;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding-left: 15px;
+}
+
+.banner-rightbox-button button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #e4d9d9;
+  color: var(--primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-family: "Frank Ruhl Libre";
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.banner-rightbox-button button:hover {
+  background: #ada6a6;
+}
+
+/* .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .footer .long-line {
+    width: 1500px;
+    height: 0px;
+    border: 1px solid #525151;
+    position: relative;
+    top: 100px;
+  } */
