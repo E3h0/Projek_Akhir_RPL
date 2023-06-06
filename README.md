@@ -30,6 +30,6 @@ Pembuatan website ini bertujuan untuk memberikan sarana yang mudah diakses bagi 
   <img width=50px src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png">&nbsp;
   <img width=50px src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">&nbsp;
   <img width=50px src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2048px-Windows_logo_-_2012.svg.png">&nbsp;
-  <img height=50px src="https://upload.wikimedia.org/wikipedia/commons/0/03/Xampp_logo.svg">&nbsp;
   <img height=50px src="https://upload.wikimedia.org/wikipedia/commons/a/a1/AJAX_logo_by_gengns.svg">&nbsp;
+  <img height=50px src="https://upload.wikimedia.org/wikipedia/commons/0/03/Xampp_logo.svg">&nbsp;
 </div>
