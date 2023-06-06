@@ -1,1 +1,214 @@
+:root {
+  --primary: #3d3c3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Franklin Libre Ruhl";
+  color: var(--primary);
+  background-image: linear-gradient(180deg, rgba(197, 139, 131, 0.3) 0%, rgba(255, 255, 255, 0) 9%, #FFFFFF 31.03%);
+}
+
+.container {
+  margin: auto;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.4rem 3%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-side a {
+  margin-left: auto;
+  position: relative;
+  color: var(--primary);
+  top: 14px;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.header-side a:hover {
+  font-weight: bold;
+}
+
+.banner {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.banner-left-form-title {
+  margin-bottom: 20px;
+}
+
+.banner-left-form-title h1 {
+  margin-top: 60px;
+  text-align: center;
+  font-family: 'Rambla';
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.2;
+  background: linear-gradient(111.79deg, #003538 25.81%, #A07664 70.78%, rgb(235, 255, 220, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  bottom: 50px;
+}
+
+.banner-left-form-section {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 30px;
+  left: 22%;
+}
+
+.form-input label {
+  font-family: 'Raleway';
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--primary);
+  position: relative;
+  left: 70px;
+}
+
+.form-input input {
+  display: flex;
+  border: 1px solid rgba(0,0,0,.38);
+  border-radius: 23.5px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--primary);
+  font-family: 'Raleway';
+  font-size: .875em;
+  padding: 13px 130px;
+  position: relative;
+  left: 70px;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 40%;
+}
+
+input[type="email"], input[type="text"], input[type="password"] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form-submit {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-submit-button {
+  background: #E6DCDC;
+  border: 1px solid var(--primary);
+  border-radius: 23.5px;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  color: var(--primary);
+  cursor: pointer;
+  display: block;
+  font-family: 'Frank Ruhl Libre';
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 15px auto;
+  position: relative;
+  bottom: 40%;
+  padding: 8px 7px;
+  width: 17%;
+}
+
+.form-submit-button:hover {
+  background: #c5baba;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+.form-caution {
+  color: var(--primary);
+  font-family: 'Frank Ruhl Libre';
+  font-size: 17px;
+  font-weight: lighter;
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+
+.form-caution a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.form-caution a:hover {
+  font-size: larger;
+  text-decoration: underline;
+}
+
+.banner-right {
+  position: relative;
+  width: 50%;
+}
+
+.banner-right-img {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-right-img svg {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 600px;
+  position: relative;
+  bottom: 85px;
+  position: absolute;
+  right: -100%;
+  top: -40px;
+  animation: wipeFromRight 5s forwards;
+}
+
+@keyframes wipeFromRight {
+  0% {
+    right: -100%;
+  }
+  80% {
+    right: 17%;
+  }
+  100% {
+    right: 17%;
+  }
+}
 
