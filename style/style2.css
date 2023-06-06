@@ -1,0 +1,433 @@
+:root {
+  --primary: #3d3c3c;
+  --bg: linear-gradient(
+    180deg,
+    rgba(197, 139, 131, 0.3) 0%,
+    rgba(255, 255, 255, 0) 21.03%,
+    #ffffff 21.03%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Franklin Libre Ruhl";
+  background-image: linear-gradient(180deg, rgba(197, 139, 131, 0.3) 0%, rgba(255, 255, 255, 0) 9%, #FFFFFF 31.03%);
+  color: var(--primary);
+}
+
+.container {
+  margin: auto;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header h1 {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.header-btn ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-btn li {
+  margin: 0 10px;
+}
+
+.header-btn li a {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.header-btn li a:hover {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
+.header-btn li:last-child a {
+  background-color: #f3eaea;
+  color: var(--bg);
+  padding: 10px 20px;
+  border: 1px solid #f5f5f5;
+  box-shadow: 4px 4px 8px rgba(96, 96, 96, 0.25);
+  border-radius: 8px;
+}
+
+.header-btn li:last-child a:hover {
+  background: #ada6a6;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.banner-title {
+  flex-basis: 50%;
+  text-align: left;
+  padding: 20px;
+  position: relative;
+}
+
+.banner-title h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  background: linear-gradient(
+    134deg,
+    #003538 14.81%,
+    #a07664 73.84%,
+    rgba(235, 255, 220, 0) 80.78%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border: 1px #8c7c7c;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  left: 40px;
+  bottom: 70px;
+}
+
+.banner-title p {
+  font-size: 25px;
+  color: #666;
+  margin-top: 0;
+  position: relative;
+  left: 40px;
+  bottom: 70px;
+}
+
+.banner-image {
+  flex-basis: 50%;
+  text-align: right;
+  padding: 20px;
+}
+
+.banner-image img {
+  width: 100%;
+  max-width: 6100px;
+  height: auto;
+}
+
+.artikel {
+  padding: 20px;
+  padding-bottom: 130px;
+}
+
+.artikel .artikel-title h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.artikel .artikel-title p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.artikel .readme {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.readme-first,
+.readme-second,
+.readme-third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: 400px;
+  height: 352px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.readme-first {
+  background-image: url(awareness.jpg);
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.readme-second {
+  background-image: url(consult.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.readme-third {
+  background-image: url(mentalhealth.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-readme-first,
+.btn-readme-second,
+.btn-readme-third {
+  margin-top: 20px;
+  background-color: #83807e;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  right: 130px;
+  bottom: 10px;
+  transition: font-weight text-decoration 0.3s ease;
+}
+
+.btn-readme-first:hover,
+.btn-readme-second:hover,
+.btn-readme-third:hover {
+  background-color: #54514f;
+}
+
+.viewer1, .viewer2, .viewer3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  right: 125px;
+}
+
+.awareness,
+.consultation,
+.mentalhealth {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  width: 338px;
+  height: 100%;
+  position: relative;
+  top: 135px;
+  text-align: justify;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.awareness h1, .consultation h1, .mentalhealth h1 {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-family: 'Raleway';
+}
+
+.awareness p, .consultation p, .mentalhealth p {
+  margin-left: 20px;
+}
+
+.awareness p.awareness-writer, .consultation p.consultation-writer, .mentalhealth p.mentalhealth-writer {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.awareness p.awareness-date, .consultation p.consultation-date, .mentalhealth p.mentalhealth-date {
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.readme-first-seemore,
+.readme-second-seemore,
+.readme-third-seemore {
+  background-color: #a99087;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 60px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  width: 202px;
+  height: 60px;
+  top: 110px;
+  transition: font-weight text-decoration 0.3s ease;
+}
+
+.readme-first-seemore:hover,
+.readme-second-seemore:hover,
+.readme-third-seemore:hover {
+  background-color: #7a716e;
+}
+
+/* styling for footer section */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* styling for footer-left section */
+.footer-left {
+  flex-basis: 30%;
+}
+
+/* styling for footer-left-loneliness section */
+.footer-left-loneliness {
+  margin-bottom: 30px;
+}
+
+/* styling for h1 tag in footer-left-loneliness section */
+.footer-left-loneliness h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* styling for p tag in footer-left-loneliness section */
+.footer-left-loneliness p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* styling for footer-left-contacus section */
+.footer-left-contacus p {
+  line-height: 1.5;
+}
+
+span {
+  font-weight: 700;
+}
+
+/* styling for footer-center section */
+.footer-center {
+  display: flex;
+  flex-basis: 20%;
+  justify-content: space-between;
+}
+
+/* styling for footer-center-about section */
+/* .footer-center-about,
+.footer-center-support {
+} */
+
+/* styling for h1 tag in footer-center-about and footer-center-support section */
+.footer-center-about h1,
+.footer-center-support h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* styling for li tag in footer-center-about and footer-center-support section */
+.footer-center-about li,
+.footer-center-support li {
+  list-style: none;
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+/* styling for a tag in footer-center-about and footer-center-support section */
+.footer-center-about a,
+.footer-center-support a {
+  text-decoration: none;
+  color: var(--primary);;
+}
+
+
+/* styling for footer-right section */
+.footer-right {
+  flex-basis: 30%;
+}
+
+/* styling for footer-right-qof section */
+.footer-right-qof {
+  margin-bottom: 80px;
+}
+
+/* styling for h1 tag in footer-right-qof section */
+.footer-right-qof h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* styling for button tag in footer-right-qof section */
+.footer-right-qof input {
+  border-radius: 8px;
+  border: 1px solid rgb(176 190 197);
+  background-color: transparent;
+  padding: 0.625rem 70px 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: rgb(69 90 100);
+  outline: none;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send button.send-btn {
+  background-color: aqua;
+}
+
+
+
+/* styling for button:hover tag in footer-right-qof section */
+.footer-right-qof button:hover {
+  color: #000;
+}
+
+/* styling for footer-right-followus section */
+.footer-right-followus li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+/* styling for img tag in footer-right-followus section */
+.footer-right-followus a {
+  color:var(--primary);
+}
+
+/* .footer-right-followus a:hover {
+  font-size: large;
+} */
+
+
+
