@@ -10,5 +10,5 @@ Pembuatan website ini bertujuan untuk memberikan sarana yang mudah diakses bagi 
 | :-------- | :------- | :-------------------------------- |:----|
 | [@E3h0](https://github.com/E3h0) | Fathan Abdul Mu'ti |G6401211020| Backend|
 |[@ariiqarrafi](https://github.com/ariiqarrafi)| Muhammad Ariiq Arrafi| G6401211062| Frontend|
-|[@titamadriyanti](https://github.com/titamadriyanti)|Tita Madriyanti| G6401211120| UI/UX Designe
+|[@titamadriyanti](https://github.com/titamadriyanti)|Tita Madriyanti| G6401211120| UI/UX Designer
 
