@@ -1,0 +1,268 @@
+:root {
+  --primary: #3d3c3c;
+  --bg: linear-gradient(
+    180deg,
+    rgba(197, 139, 131, 0.3) 0%,
+    rgba(255, 255, 255, 0) 21.03%,
+    #ffffff 21.03%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Franklin Libre Ruhl";
+  background-image: linear-gradient(
+    180deg,
+    rgba(197, 139, 131, 0.3) 0%,
+    rgba(255, 255, 255, 0) 9%,
+    #ffffff 31.03%
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--primary);
+}
+
+.container {
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-title h1 {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.header-backto a {
+  position: relative;
+  color: var(--primary);
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.header-backto a:hover {
+  font-weight: bold;
+}
+
+.banner {
+  align-items: center;
+  padding: 20px;
+}
+
+.banner-header {
+  width: 100%;
+  height: 400px;
+}
+
+.banner-header-title {
+  margin: auto;
+  width: 20%;
+  position: absolute;
+  top: 35%;
+  left: 41%;
+}
+
+.banner-header-title h1 {
+  font-weight: 700;
+  justify-content: center;
+  font-family: 'Rambla';
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.2;
+  background: linear-gradient(111.79deg, #003538 25.81%, #A07664 70.78%, rgb(235, 255, 220, 0) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.banner-header-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-left {
+  width: 30%;
+  height: 322px;
+  background-image: url(aamentor2.png);
+  background-size: cover;
+}
+
+.img-right {
+  width: 30%;
+  height: 322px;
+  background-image: url(tetehmentor2.png);
+  background-size: cover;
+}
+
+.banner-desc {
+  margin: auto;
+  width: 75%;
+  text-align: justify;
+}
+
+.banner-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.banner-mentor {
+  /* background-color: aqua; */
+  margin: auto;
+  margin-top: 40px;
+  width: 76%;
+}
+
+.banner-mentor-img-top,
+.banner-mentor-img-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.mentor-1,
+.mentor-2,
+.mentor-3,
+.mentor-4,
+.mentor-5,
+.mentor-6,
+.mentor-7,
+.mentor-8 {
+  align-items: center;
+  width: 20%;
+  height: 200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 23.5px;
+}
+
+.mentor-1 {
+  background-image: url(aamentor2.png);
+  background-size: cover;
+  background-position-x: -3.7rem;
+  background-repeat: no-repeat;
+}
+
+.mentor-2 {
+  background-image: url(tetehmentor2.png);
+  background-size: cover;
+  background-position-x: -2rem;
+  background-repeat: no-repeat;
+}
+
+.mentor-3 {
+  background-image: url(bangmentor.png);
+  background-size: cover;
+  background-position: -2rem 0.5rem;
+  background-repeat: no-repeat;
+}
+
+.mentor-4 {
+  background-image: url(kangmentor.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.mentor-5 {
+  background-image: url(mbamentor.png);
+  background-size: cover;
+  background-position-x: -3.5rem;
+  background-repeat: no-repeat;
+}
+
+.mentor-6 {
+  background-image: url(kakamentor.png);
+  background-size: cover;
+  background-position-x: -4rem;
+  background-repeat: no-repeat;
+}
+
+.mentor-7 {
+  background-image: url(unimentor.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.mentor-8 {
+  background-image: url(sismentor.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.sesi-1, .sesi-2, .sesi-3, .sesi-4,
+.sesi-5, .sesi-6, .sesi-7, .sesi-8 {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sesi-1 p, .sesi-2 p, .sesi-3 p, .sesi-4 p,
+.sesi-5 p, .sesi-6 p, .sesi-7 p, .sesi-8 p {
+    background-color: #83807e;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    right: 65px;
+    transition: font-weight text-decoration 0.3s ease;
+}
+
+.blur-1, .blur-2, .blur-3, .blur-4,
+.blur-5, .blur-6, .blur-7, .blur-8 {
+  background: rgba(255, 255, 255, 0.5);
+  /* border: 2px solid #ffffff; */
+  box-shadow: 0px 4px 10px rgba(208, 199, 199, 0.953);
+  backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  top: 120px;
+  text-align: justify;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+
+
