@@ -12,3 +12,11 @@ Pembuatan website ini bertujuan untuk memberikan sarana yang mudah diakses bagi 
 |[@ariiqarrafi](https://github.com/ariiqarrafi)| Muhammad Ariiq Arrafi| G6401211062| Frontend|
 |[@titamadriyanti](https://github.com/titamadriyanti)|Tita Madriyanti| G6401211120| UI/UX Designer
 
+
+
+## Features
+
+- Loneliness Level Test
+- Mentor/Psychologist recommendation
+- Test/score history
+- Edit & Update profile
